@@ -1,0 +1,13 @@
+services:
+  nginx:
+    image: nginx:latest
+    networks:
+      - frontend
+      - internal
+    hostname: app-1-nginx
+  
+networks:
+  frontend:
+    external: true
+  internal:
+

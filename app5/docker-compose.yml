@@ -1,0 +1,14 @@
+services:
+  someapp:
+    image: ubuntu:latest
+    networks:
+      - frontend
+      - internal
+    hostname: app-5-app
+    command: sleep 360000
+  
+networks:
+  frontend:
+    external: true
+  internal:
+
