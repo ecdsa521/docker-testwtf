@@ -1,0 +1,14 @@
+To test this:
+
+    $ docker network create frontend
+
+in each app1 to app5: 
+
+    $ docker-compose up -d
+
+in app5: 
+
+    $ docker-compose exec someapp bash
+    # apt update && apt install iputils-ping
+    # ping nginx
+
